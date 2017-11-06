@@ -1,0 +1,27 @@
+#!/bin/bash
+set -e
+
+# Make sure Ruby 2.3.3 is installed
+RUBY_VERSION=2.3.3
+
+hash rvm 2>/dev/null || {
+    \curl -sSL https://get.rvm.io | bash -s stable --ruby
+    source ~/.rvm/scripts/rvm
+}
+
+if ! ruby --version | grep --quiet $RUBY_VERSION; then
+    rvm install $RUBY_VERSION
+    rvm use $RUBY_VERSION --default
+fi
+
+hash bundle 2>/dev/null || {
+    gem install bundler
+}
+
+
+
+bundle install
+npm install
+
+bundle exec jekyll build
+bundle exec jekyll serve --watch --host=0.0.0.0 --config "_config.yml"

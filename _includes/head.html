@@ -1,0 +1,63 @@
+<head>
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
+  
+  {% if jekyll.environment == 'production' and site.google_analytics %}
+  {% include google-analytics.html %}
+  {% endif %}
+</head>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %} | Jürgen Lorenz</title>
+
+  <!-- SEO -->
+  <meta name="author" content="Jürgen Lorenz">
+  <meta name="description" content="Portfolio of Jürgen Lorenz - Front-End Developer">
+  <meta name="keywords" content="jürgen, lorenz, jürgen lorenz, web design, web development, javascript, html, front-end development">
+  <link rel="canonical" href="http://lorenz.github.io/">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
+
+  <!-- Social: Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@13lorenz13">
+  <meta name="twitter:creator" content="@13lorenz13">
+  <meta name="twitter:title" content="Portfolio of Jürgen Lorenz - Front-End Developer">
+  <meta name="twitter:description" content="Interactive portfolio of Jürgen Lorenz">
+  <meta name="twitter:image:src" content="http://lorenz.github.io/img/logo.png">
+
+  <!-- Social: Facebook / Open Graph -->
+  <meta property="og:url" content="http://lorenz.github.io/index.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Portfolio of Jürgen Lorenz - Front-End Developer">
+  <meta property="og:image" content="http://lorenz.github.io/img/logo.png">
+  <meta property="og:description" content="Interactive portfolio of Jürgen Lorenz">
+  <meta property="og:site_name" content="Portfolio of Jürgen Lorenz">
+  <meta property="article:author" content="https://www.facebook.com/jurgen.lorenz.902">
+  <meta property="article:publisher" content="https://www.facebook.com/jurgen.lorenz.902">
+
+
+  <!-- CSS -->
+  <link rel="stylesheet/less" type="text/css" href="/resources/css/main.less" />
+
+  <!-- Javascript librarys -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.2/lib/draggable.js"></script>
+  <!--
+  <script src="bower_components/less/dist/less.min.js"></script>
+  <script src="node_modules/angular/angular.js"></script>
+  <script src="node_modules/angular-scroll/angular-scroll.min.js"></script>
+  -->
+  <script src="resources/js/main.js"></script>
+
+
+  <!--
+  <script type="text/javascript" src="js/lib/PxLoader.min.js"></script>
+  <script type="text/javascript" src="js/lib/pxloader-images.min.js"></script>
+  <script type="text/javascript" src="js/lib/lazyload.js"></script>
+  -->
+</head>
